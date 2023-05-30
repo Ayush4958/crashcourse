@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cabin&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Arimo:ital@1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="help.css">
+    <title>Crash Course</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+    
+<!-- Creatign the side Bar {completed}-->
+<div class="navbar">
+
+    <div class="logo-content">
+
+        <div class="logo">
+            <i class='bx bxl-vuejs bx-sm'></i>
+            <div class="logo-name">CrashCourse</div>
+        </div>
+
+        <i class='bx bx-menu bx-sm' id="btn"></i>
+
+    </div>
+
+    <ul class="nav-list">
+        <li>
+            <i class='bx bx-search '></i>
+            <input type="text" placeholder="Search...">
+            <span class="tooltip">Search...</span>
+        </li>
+
+        <li>
+            <a href="#">
+                <i class='bx bxs-user  bx-sm'></i>
+                <span class="link-name">User</span>
+            </a>
+            <span class="tooltip">User</span>
+        </li>
+
+        <li>
+            <a href="https://www.w3schools.com/html/html_intro.asp#:~:text=HTML%20stands%20for%20Hyper%20Text,how%20to%20display%20the%20content">
+                <i class='bx bxl-html5 bx-sm'></i>
+                <span class="link-name">HTML5</span>
+            </a>
+            <span class="tooltip">HTML5</span>
+        </li>
+
+        <li>
+            <a href="https://www.w3schools.com/cssref/css_functions.php">
+                <i class='bx bxl-css3 bx-sm'></i>
+                <span class="link-name">CSS3</span>
+            </a>
+            <span class="tooltip">CSS3</span>
+        </li>
+
+        <li>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">
+                <i class='bx bxl-javascript bx-sm' ></i>
+                <span class="link-name">JavaScript</span>
+            </a>
+            <span class="tooltip">JavaScript</span>
+        </li>
+
+        <li>
+            <a href="https://nodejs.dev/en/learn/">
+                <i class='bx bxl-nodejs  bx-sm' ></i>
+                <span class="link-name">Node.Js</span>
+            </a>
+            <span class="tooltip">Node.Js</span>
+        </li>
+
+        <li>
+            <a href="https://docs.djangoproject.com/en/4.2/">
+                <i class='bx bxl-django bx-sm' ></i>
+                <span class="link-name">DJango</span>
+            </a>
+            <span class="tooltip">DJango</span>
+        </li>
+        
+        <li onclick="alert('Your Files and progress has been Saved')">
+            <a href="#">
+                <i class='bx bx-heart bx-sm'></i>
+                <span class="link-name">Saved</span>
+            </a>
+            <span class="tooltip">Saved</span>
+        </li>
+
+        <li>
+            <a href="#">
+                <i class='bx bx-cog  bx-sm'></i>
+                <span class="link-name">Settings</span>
+            </a>
+            <span class="tooltip">Settings</span>
+        </li>
+
+    </ul>
+    <div class="profile-content">
+        <div class="profile">
+            <div class="profile-details">
+                <img src="profile.jpg" alt="">
+                <div class="name-job">
+                    <div class="name">Ayush bhandari</div>
+                    <div class="job">Web Developer</div>
+                </div>
+            </div>
+            <i class='bx bx-log-out' id="log-out"></i>
+        </div>
+    </div>
+
+</div>
+
+<!-- Creatign the Home content {completed}-->
+<div class="form-content">
+
+<!-- Creating the Navigation Bar {completed}-->
+<div class="nav">
+<ul>
+    <li> <a href="#"><i class='bx bxs-home'></i>&nbsp;Home</a> </li>
+    <li> <a href="#"><i class='bx bxl-discourse'></i>&nbsp;Course</a> </li>
+    <li> <a href="#"><i class='bx bx-label' ></i>&nbsp;About Us</a> </li>
+    <li> <a href="/static/contact.html"><i class='bx bxs-user-circle'></i>&nbsp;Enroll Now</a> </li>
+</ul>
+</div>
+
+<!-- creating the contact form {Completed}-->
+    <div class="contact">
+    <h3>Fill up the form now - Enroll On Best Course</h3>
+    <form action="/contact" method="post" name="form">
+        <input type="text" name="identity" placeholder="Enter your Name" class="input"> <br>
+        <input type="text" name="age" placeholder="Enter your Age" class="input"> <br>
+        <input type="date" name="dob" placeholder="Enter your Date-of-Birth" class="input"> <br>
+        <input type="number" name="phone" placeholder="Enter your Phone Number" class="input"> <br>
+        <input type="email" name="email" placeholder="Enter your E-mail" class="input"> <br>
+        <input type="text" name="course" placeholder="Enter your Course" class="input"> <br>
+        <button type="submit" class="form-btn">Submit</button>
+    </form>
+</div>
+</div>
+<script src="main.js"></script>
+</body>
+</html>

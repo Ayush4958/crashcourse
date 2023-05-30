@@ -1,0 +1,393 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    position: relative;
+    min-height: 60vh;
+    overflow: hidden;
+    width: 100%;
+}
+
+/* Styling the Side bar  */
+
+.navbar{
+    position: fixed;
+    height: 100%;
+    width: 68px;
+    top: 0;
+    left: 0;
+    background-color: #0c0c15;
+    padding: 14px 8px;
+    transition: all 0.5s ease;
+}
+
+.navbar.active{
+    width: 240px;
+}
+
+.navbar .logo-content .logo{
+    display: flex;
+    color: rgb(255, 255, 255);
+    align-items: center;
+    margin: 8px 0px;
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+
+.navbar.active .logo-content .logo{
+    opacity: 1;
+    pointer-events: none;
+}
+
+.logo-content .logo i{
+    height: 22px;
+    margin-right: 5px;
+}
+
+.logo-content .logo .logo-name{
+    font-size: 22px;
+    font-weight: 400;
+}
+
+.navbar #btn{
+    position: absolute;
+    color: white;
+    left: 50%;
+    top: 8px;
+    font-size: 28px;
+    height : 50px;
+    width : 50px;
+    text-align: center;
+    line-height: 50px;
+    transform: translateX(-50%);
+    cursor: pointer;
+}
+
+.navbar.active #btn{
+    left: 90%;
+}
+
+.navbar ul{
+    margin-top: 20px;
+}
+
+.navbar ul li {
+    position: relative;
+    list-style: none;
+    height: 50px;
+    width: 100%;
+    margin: 0 7px;
+    line-height: 50px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.navbar ul li a {
+    display: flex;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    border-radius: 12px;
+    white-space: nowrap;
+}
+
+.navbar ul li input{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 12px;
+    border: none;
+    outline: none;
+    background-color: #1d1b31;
+    padding-left: 50px;
+    font-size: 19px;
+    color: white;
+}
+
+.navbar ul li .bx-search{
+    position: absolute;
+    z-index: 99;
+    color: white;
+    transition: all 0.5s ease;
+}
+
+.navbar ul li .bx-search:hover{ 
+    background-color: #fff;
+    color: #1d1b31;
+}
+
+.navbar ul li a:hover{
+    background-color: white;
+    color: #0c0c15;
+}
+
+.navbar ul li .tooltip{
+    position: absolute;
+    left: 122px;
+    top: 0%;
+    transform: translate(-50% , -50%);
+    height: 35px;
+    width: 122px;
+    border-radius: 6px;
+    line-height: 35px;
+    text-align: center;
+    background-color: white;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0 , 0.2);
+    transition: all 0.5s ease;
+    opacity: 0;
+    pointer-events: none;
+    display: block;
+}
+
+.navbar.active ul li .tooltip{
+    display: none;
+}
+
+.navbar ul li:hover .tooltip{
+    transition: all 0.5s ease;
+    top: 50%;
+    opacity: 1;
+}
+
+.navbar .link-name{
+    opacity: 0;
+    pointer-events: auto;
+}
+
+.navbar.active .link-name{
+    opacity: 1;
+    pointer-events: none;
+    transition: all 0.5s ease;
+}
+
+.navbar ul li i {
+    height: 50px;
+    min-width: 50px;
+    line-height: 50px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.navbar .profile-content{
+    position: absolute;
+    color: white;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.navbar .profile-content .profile{
+    position: relative;
+    padding: 10px 6px;
+    height: 70px;
+    background-color: #1d1b31;
+}
+
+.profile-content .profile .profile-details{
+    display: flex;
+    align-items: center;
+    pointer-events: none;
+    white-space: nowrap;
+    opacity: 0;
+}
+
+.navbar.active .profile .profile-details{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.profile .profile-details img{
+    height: 45px ;
+    width: 45px;
+    object-fit: cover;
+    border-radius: 11px;
+}
+
+.profile .profile-details .name-job{
+    margin-left: 9px;
+}
+
+.profile .profile-details .name{
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.profile .profile-details .job{
+    font-size: 12px;
+}
+
+.profile #log-out{
+    position: absolute;
+    left: 50%;
+    bottom: 8px;
+    transform: translateX(-50%);
+    min-height: 50px;
+    line-height: 50px;
+    font-size: 21px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.navbar.active .profile #log-out{
+    left: 87%;
+}
+
+
+/* Styling the Home page content */
+.home-content{
+    position: absolute;
+    height: 100%;
+    width: calc(100% - 66px);
+    left: 66px;
+    transition: all 0.5s ease;
+    text-align: left;
+}
+
+.home-content::before{
+    content: "";
+    position: absolute;
+    background: url(https://wallpaperaccess.com/full/2454628.png) no-repeat center center/cover;
+    height: 95%;
+    width: 100%;
+    top: 0;
+    left: 2px;
+    z-index: -1;
+    opacity: 1;
+    animation: slider 10s infinite linear
+}
+
+@keyframes slider {
+    0%{ background: url(https://wallpaperaccess.com/full/2454628.png) no-repeat center center/cover;}
+    25%{ background: url(https://media.istockphoto.com/id/1290801796/vector/abstract-dark-hexagon-pattern-on-red-neon-background-technology-style-modern-futuristic.jpg?s=612x612&w=0&k=20&c=v1xXfuDIrUOwLiN2_pgOasYSFhIcrwrfVx--BEl-djk=) no-repeat center center/cover;}
+    50%{background: url(https://i0.wp.com/www.titanui.com/wp-content/uploads/2016/10/14/Dark-HI-Tech-Vector-Background.jpg) no-repeat center center/cover;}
+    75%{background: url(https://t3.ftcdn.net/jpg/03/76/71/62/360_F_376716255_60crq1viEnJuTugBxsAj9Uhi1j0Oo57l.jpg)no-repeat center center/cover;}
+}
+
+.navbar.active ~ .home-content{
+    width: calc(100% - 240px);
+    left: 240px;
+}
+
+.home-content .text{
+    position: absolute;
+    font-size: 2.8rem;
+    color: #ffffff;
+    top: 25%;
+    left: 3%;
+    margin: 10px 20px;
+    font-family: 'Cabin', sans-serif;
+}
+
+.home-content .text1{
+    position: absolute;
+    font-size: 4rem;
+    color: #aaff5a;
+    top: 40%;
+    left: 3%;
+    margin: 10px 20px;
+    font-family: 'Cabin', sans-serif;
+}
+
+.home-content .text2{
+    position: absolute;
+    font-size: 1.4rem;
+    color: #8dffdd;
+    top: 64%;
+    left: 3%;
+    margin: 10px 20px;
+    font-family: 'Cabin', sans-serif;
+}
+
+/* Styling the page 3 card  */
+
+.cards{
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 77%;
+    align-items: center;
+    margin: 8px 2px;
+}
+
+.card{
+    border: solid 4px black;
+    border-radius: 12px;
+    margin: 2px 15px;
+    padding: 5px 5px;
+    margin: auto;
+    height: 250px;
+    width: 31%;
+    text-align: center;
+    box-shadow: 4px 5px 4px 5px rgb(131, 131, 131);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.card h3{
+    margin: 9px 0px;
+    font-family: 'Cabin', sans-serif;
+    font-size: 1.5rem;
+}
+
+.card p{
+    margin: 15px 0px;
+    font-family: 'Arimo', sans-serif;
+}
+
+.card-btn{
+    padding: 5px 5px;
+    font-size: 1rem;
+    color: rgb(255, 186, 186);
+    background-color: rgb(1, 1, 24);
+    border-radius: 12px;
+    border: solid 7px black;
+    cursor: pointer;
+    outline: none;
+    font-family: 'Arimo', sans-serif;
+}
+
+.card-btn:hover{
+    outline-color: rgb(130, 174, 255);
+    outline-style: dashed;
+    outline-width: 5px;
+    transition: all 1s ease;
+}
+
+/* Styling The navigation Bar */
+
+.home-content .nav ul{
+    display: flex;
+    position: absolute;
+    margin: 10px 16px;
+    padding: 4px 8px;
+    right: 5% ;
+}
+
+.home-content .nav ul li{
+    list-style: none;
+    margin: 5px 33px;
+    padding: 5px 5px;
+    font-size: 1.1rem;
+    font-family: monospace;
+}
+
+.home-content .nav ul li a{
+    color: white;
+    text-decoration: none;
+}
+
+.home-content .nav ul li a:hover{
+    color: Black;
+    background-color: white;
+    border-radius: 15px;
+    padding: 6px 4px;
+}
+
+
+

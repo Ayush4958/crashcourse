@@ -1,0 +1,106 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* Styling the form interface page  */
+
+.form-content{
+    position: absolute;
+    height: 100%;
+    width: calc(100% - 66px);
+    left: 66px;
+    transition: all 0.5s ease;
+    text-align: left;
+}
+
+.form-content::before{
+    content: "";
+    position: absolute;
+    background: url(https://img.freepik.com/free-photo/3d-dark-grunge-display-background-with-smoky-atmosphere_1048-16218.jpg) no-repeat center center/cover;
+    height: 130%;
+    width: 100%;
+    top: 0;
+    left: 2px;
+    z-index: -1;
+    opacity: 1;
+    animation: slider 13s infinite linear
+}
+
+@keyframes slider {
+    0%{ background: url(https://img.freepik.com/free-photo/3d-dark-grunge-display-background-with-smoky-atmosphere_1048-16218.jpg) no-repeat center center/cover;}
+    25%{ background: url(https://cdn.pixabay.com/photo/2019/09/18/21/12/dark-4487690_1280.jpg) no-repeat center center/cover;}
+    50%{background: url(https://thumbs.dreamstime.com/b/dark-background-texture-blank-design-116328786.jpg) no-repeat center center/cover;}
+    75%{background: url(https://png.pngtree.com/thumb_back/fh260/background/20190727/pngtree-openwork-round-hole-metal-texture-black-red-background-image_285741.jpg)no-repeat center center/cover;}
+}
+
+.navbar.active ~ .form-content{
+    width: calc(100% - 240px);
+    left: 240px;
+}
+
+/* Styling the Nav Bar */
+
+.form-content .nav ul{
+    display: flex;
+    position: absolute;
+    margin: 10px 16px;
+    padding: 4px 8px;
+    right: 5% ;
+}
+
+.form-content .nav ul li{
+    list-style: none;
+    margin: 5px 33px;
+    padding: 5px 5px;
+    font-size: 1.1rem;
+    font-family: monospace;
+}
+
+.form-content .nav ul li a{
+    color: white;
+    text-decoration: none;
+}
+
+.form-content .nav ul li a:hover{
+    color: Black;
+    background-color: white;
+    border-radius: 15px;
+    padding: 6px 4px;
+}
+
+/* Styling the Contact form */
+
+.contact{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    top: 13%;
+}
+
+.contact h3{
+    color: white;
+    font-size: 2.3rem;
+    margin: 22px 8px;
+    font-family: monospace;
+}
+
+.contact .input{
+    border: solid 4px rgb(0, 0, 0);
+    border-radius: 12px;
+    width: 390px;
+    box-shadow: 7px 8px 9px rgb(147, 147, 147);
+    font-size: 1rem;
+    margin: 9px 15px;
+    padding: 4px 7px;
+}
+
+.contact .form-btn{
+    width: 100px;
+    box-shadow: 7px 8px 9px rgb(147, 147, 147);
+    font-size: 1rem;
+    border: solid 4px rgb(0, 0, 0);
+    padding: 4px 7px;
+    border-radius: 12px;
+}

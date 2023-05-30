@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cabin&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Arimo:ital@1&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="main.css">
+    <title>Crash Course</title>
+</head>
+
+<body>
+
+<!-- Creatign the side Bar {completed} -->
+    <div class="navbar">
+
+        <div class="logo-content">
+
+            <div class="logo">
+                <i class='bx bxl-vuejs bx-sm'></i>
+                <div class="logo-name">CrashCourse</div>
+            </div>
+
+            <i class='bx bx-menu bx-sm' id="btn"></i>
+
+        </div>
+
+        <ul class="nav-list">
+            <li>
+                <i class='bx bx-search '></i>
+                <input type="text" placeholder="Search...">
+                <span class="tooltip">Search...</span>
+            </li>
+
+            <li>
+                <a href="#">
+                    <i class='bx bxs-user  bx-sm'></i>
+                    <span class="link-name">User</span>
+                </a>
+                <span class="tooltip">User</span>
+            </li>
+
+            <li>
+                <a href="https://www.w3schools.com/html/html_intro.asp#:~:text=HTML%20stands%20for%20Hyper%20Text,how%20to%20display%20the%20content">
+                    <i class='bx bxl-html5 bx-sm'></i>
+                    <span class="link-name">HTML5</span>
+                </a>
+                <span class="tooltip">HTML5</span>
+            </li>
+
+            <li>
+                <a href="https://www.w3schools.com/cssref/css_functions.php">
+                    <i class='bx bxl-css3 bx-sm'></i>
+                    <span class="link-name">CSS3</span>
+                </a>
+                <span class="tooltip">CSS3</span>
+            </li>
+
+            <li>
+                <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">
+                    <i class='bx bxl-javascript bx-sm' ></i>
+                    <span class="link-name">JavaScript</span>
+                </a>
+                <span class="tooltip">JavaScript</span>
+            </li>
+    
+            <li>
+                <a href="https://nodejs.dev/en/learn/">
+                    <i class='bx bxl-nodejs  bx-sm' ></i>
+                    <span class="link-name">Node.Js</span>
+                </a>
+                <span class="tooltip">Node.Js</span>
+            </li>
+
+            <li>
+                <a href="https://docs.djangoproject.com/en/4.2/">
+                    <i class='bx bxl-django bx-sm' ></i>
+                    <span class="link-name">DJango</span>
+                </a>
+                <span class="tooltip">DJango</span>
+            </li>
+            
+            <li onclick="alert('Your Files and progress has been Saved')">
+                <a href="#">
+                    <i class='bx bx-heart bx-sm'></i>
+                    <span class="link-name">Saved</span>
+                </a>
+                <span class="tooltip">Saved</span>
+            </li>
+
+            <li>
+                <a href="#">
+                    <i class='bx bx-cog  bx-sm'></i>
+                    <span class="link-name">Settings</span>
+                </a>
+                <span class="tooltip">Settings</span>
+            </li>
+
+        </ul>
+        <div class="profile-content">
+            <div class="profile">
+                <div class="profile-details">
+                    <img src="profile.jpg" alt="">
+                    <div class="name-job">
+                        <div class="name">Ayush bhandari</div>
+                        <div class="job">Web Developer</div>
+                    </div>
+                </div>
+                <i class='bx bx-log-out' id="log-out"></i>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Creatign the Home content {completed} -->
+    <div class="home-content">
+
+<!-- Creating the Navigation Bar {completed} -->
+
+<div class="nav">
+    <ul>
+        <li> <a href="#"><i class='bx bxs-home'></i>&nbsp;Home</a> </li>
+        <li> <a href="#"><i class='bx bxl-discourse'></i>&nbsp;Course</a> </li>
+        <li> <a href="#"><i class='bx bx-label' ></i>&nbsp;About Us</a> </li>
+        <li> <a href="contact.html"><i class='bx bxs-user-circle'></i>&nbsp;Enroll Now</a> </li>
+    </ul>
+</div>
+
+<!-- Creating the main page  {completed} -->
+
+        <div class="text"><b> Start  Learning From The Best </b></div>
+        <div class="text1"><b> Crash Course </b></div>
+        <p class="text2">Improve your coding skill and knowledge by Learning through our master course and perfect coding documentation for becoming beginner to pro or a pro to master </p>
+
+<!-- Creating the Cards {completed} -->
+        <div class="cards">
+            <div class="card">
+                <h3> Frontend  course</h3>
+                <i class='bx bxl-html5 bx-lg'></i>
+                <i class='bx bxl-css3 bx-lg'></i>
+                <i class='bx bxl-javascript bx-lg'></i>
+                <p>In This you will learn HTML , CSS and JavaScript as a frontend Developer</p>
+                <input type="button" value="Purchase for $49.99" class="card-btn">
+            </div>
+
+            <div class="card">
+                <h3> Backend course</h3>
+                <i class='bx bxl-nodejs bx-lg' ></i>
+                <i class='bx bxl-django bx-lg'></i>
+                <p>In This you will learn Node.js and Django as a Backend Developer</p>
+                <input type="button" value="Purchase for $54.99" class="card-btn">
+            </div>
+
+            <div class="card">
+                <h3> Full-Stack  course</h3>
+                <i class='bx bxl-html5 bx-lg'></i>
+                <i class='bx bxl-css3 bx-lg'></i>
+                <i class='bx bxl-javascript bx-lg'></i>
+                <i class='bx bxl-nodejs bx-lg'></i>
+                <p>In This you will learn HTML , CSS , Javascript and Node.js as Web Developer</p>
+                <input type="button" value="Purchase for $59.99" class="card-btn">
+            </div>
+        </div>
+    </div>
+
+
+    <script src="main.js"></script>
+</body>
+</html>
